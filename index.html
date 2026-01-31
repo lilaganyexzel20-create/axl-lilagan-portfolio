@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axl Rose Lilagan | Portfolio & Resume</title>
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(255,255,255,0.08), 0 20px 80px rgba(0,0,0,0.35)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .grain:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.06;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(14px);
+      }
+      .glass-strong {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(18px);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .rm-transition {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+      /* Code-style notes (for your “where to add images/projects” messages) */
+      .note {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px dashed rgba(255, 255, 255, 0.18);
+      }
+    </style>
+  </head>
+
+  <body class="grain font-sans text-white">
+    <!-- Background -->
+    <div class="fixed inset-0 -z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-black"
+      ></div>
+      <div
+        class="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl"
+      ></div>
+      <div
+        class="absolute top-[35%] right-[10%] h-[420px] w-[420px] rounded-full bg-violet-500/10 blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-[-80px] left-[8%] h-[520px] w-[520px] rounded-full bg-emerald-500/10 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 border-b border-white/10 bg-black/20 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6"
+      >
+        <a href="#top" class="flex items-center gap-3">
+          <div
+            class="grid h-9 w-9 place-items-center rounded-xl glass shadow-glow"
+            aria-hidden="true"
+          >
+            <span class="text-sm font-bold tracking-tight">AR</span>
+          </div>
+          <div class="leading-tight">
+            <div class="text-sm font-semibold">Axl Rose Lilagan</div>
+            <div class="text-xs text-white/60">Support • Ops • Creative</div>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-white/70 md:flex">
+          <a class="hover:text-white rm-transition transition" href="#projects"
+            >Projects</a
+          >
+          <a class="hover:text-white rm-transition transition" href="#skills"
+            >Skills</a
+          >
+          <a class="hover:text-white rm-transition transition" href="#about"
+            >About</a
+          >
+          <a class="hover:text-white rm-transition transition" href="#resume"
+            >Resume</a
+          >
+          <a class="hover:text-white rm-transition transition" href="#contact"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a
+            href="#resume"
+            class="hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-glow rm-transition transition hover:bg-white/15 md:inline-flex"
+          >
+            View Resume
+          </a>
+
+          <button
+            id="menuBtn"
+            class="inline-flex items-center justify-center rounded-xl glass px-3 py-2 text-sm rm-transition transition hover:bg-white/10 md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black/30 backdrop-blur md:hidden"
+      >
+        <div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
+          <a
+            class="rounded-lg px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="rounded-lg px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+            href="#skills"
+            >Skills</a
+          >
+          <a
+            class="rounded-lg px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="rounded-lg px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+            href="#resume"
+            >Resume</a
+          >
+          <a
+            class="rounded-lg px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+            href="#contact"
+            >Contact</a
+          >
+
+          <a
+            class="mt-2 inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-glow hover:bg-white/15"
+            href="#resume"
+          >
+            View Resume
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="mx-auto max-w-6xl px-4 md:px-6">
+      <!-- Hero -->
+      <section class="pt-14 md:pt-20">
+        <div class="grid gap-8 md:grid-cols-2 md:items-center">
+          <div>
+            <div
+              class="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-white/75"
+            >
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              Open to Support / VA / Creative work
+            </div>
+
+            <h1
+              class="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl"
+            >
+              Virtual Assistant who delivers support, ops, and clean execution.
+            </h1>
+
+            <p
+              class="mt-4 max-w-xl text-base leading-relaxed text-white/70 md:text-lg"
+            >
+              I handle customer support and backend workflows with clear
+              communication and organized tracking. When needed, I also create
+              clean visuals and short-form edits to support your brand.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a
+                href="#projects"
+                class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-bold text-slate-950 rm-transition transition hover:bg-white/90"
+              >
+                View Projects
+              </a>
+              <a
+                href="#resume"
+                class="inline-flex items-center justify-center rounded-2xl glass px-5 py-3 text-sm font-semibold text-white rm-transition transition hover:bg-white/10"
+              >
+                View Resume
+              </a>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Chat Support</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Backend Ops</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Google Sheets + Stripe</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Graphic Design</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Video Editing</span
+              >
+            </div>
+
+            <!-- NOTE BLOCK -->
+            <div class="mt-6 rounded-2xl note p-4 text-sm text-white/70">
+              <div class="font-semibold text-white/90">
+                NOTE: Add your images here
+              </div>
+              <p class="mt-2">
+                Create a folder named
+                <code class="text-white/90">images</code> and add:
+              </p>
+              <ul class="mt-2 list-disc pl-5">
+                <li>
+                  <code class="text-white/90">images/profile.jpg</code> (your
+                  photo)
+                </li>
+                <li>
+                  <code class="text-white/90">images/va-cover.jpg</code> (VA
+                  project cover)
+                </li>
+                <li>
+                  <code class="text-white/90">images/design-cover.jpg</code>
+                  (Design project cover)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hero card -->
+          <div class="glass-strong rounded-3xl p-6 shadow-glow">
+            <!-- NOTE: Add your photo in /images/profile.jpg and update the src below -->
+            <div class="flex items-center gap-4">
+              <img
+                src="images/profile.jpg"
+                alt="Profile photo"
+                class="h-16 w-16 rounded-2xl object-cover border border-white/10"
+              />
+              <div>
+                <div class="text-sm font-semibold">Axl Rose Lilagan</div>
+                <div class="text-xs text-white/60">
+                  Virtual Assistant • Support • Creative
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-3">
+              <div class="rounded-2xl glass p-4">
+                <div class="text-sm font-semibold">Support mindset</div>
+                <p class="mt-1 text-sm text-white/70">
+                  Calm tone, clear updates, and complete follow-through.
+                </p>
+              </div>
+              <div class="rounded-2xl glass p-4">
+                <div class="text-sm font-semibold">Ops + tracking</div>
+                <p class="mt-1 text-sm text-white/70">
+                  Organized records, documentation, and workflow support.
+                </p>
+              </div>
+              <div class="rounded-2xl glass p-4">
+                <div class="text-sm font-semibold">Creative support</div>
+                <p class="mt-1 text-sm text-white/70">
+                  Clean visuals and edits that match your brand.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 border-t border-white/10 pt-4 text-xs text-white/60"
+            >
+              NOTE: Replace the profile photo with your own image in
+              <code class="text-white/90">images/profile.jpg</code>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="pt-16 md:pt-20">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight md:text-3xl">
+            Projects
+          </h2>
+          <p class="mt-2 text-sm text-white/70 md:text-base">
+            This website is my portfolio. Here are two featured projects to
+            start.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <!-- Project 1 -->
+          <article
+            class="group rounded-3xl glass-strong p-5 shadow-glow rm-transition transition hover:-translate-y-1"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <h3 class="text-lg font-semibold">Virtual Assistant Work</h3>
+                <p class="mt-1 text-sm text-white/70">
+                  Chat support + backend workflows and documentation.
+                </p>
+              </div>
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Support • Ops</span
+              >
+            </div>
+
+            <div
+              class="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            >
+              <!-- NOTE: Add your project image in /images/va-cover.jpg -->
+              <img
+                src="images/va-cover.jpg"
+                alt="Virtual Assistant project cover"
+                class="h-40 w-full object-cover rm-transition transition group-hover:scale-[1.02]"
+              />
+            </div>
+
+            <ul class="mt-4 space-y-2 text-sm text-white/70">
+              <li>• Live chat support for customers and field agents</li>
+              <li>• Supported enrollment, orders, and billing workflows</li>
+              <li>• Kept records organized and documented actions clearly</li>
+            </ul>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Chat Support</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >CRM</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Documentation</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Task Tracking</span
+              >
+            </div>
+
+            <div class="mt-6 text-sm text-white/70">
+              Want more samples? Use the contact form and I can share details.
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article
+            class="group rounded-3xl glass-strong p-5 shadow-glow rm-transition transition hover:-translate-y-1"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <h3 class="text-lg font-semibold">Graphic Design Work</h3>
+                <p class="mt-1 text-sm text-white/70">
+                  Brand visuals, logo concepts, and social content.
+                </p>
+              </div>
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Design</span
+              >
+            </div>
+
+            <div
+              class="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            >
+              <!-- NOTE: Add your project image in /images/design-cover.jpg -->
+              <img
+                src="images/design-cover.jpg"
+                alt="Graphic Design project cover"
+                class="h-40 w-full object-cover rm-transition transition group-hover:scale-[1.02]"
+              />
+            </div>
+
+            <ul class="mt-4 space-y-2 text-sm text-white/70">
+              <li>• Logo concepts and branding exploration</li>
+              <li>• Social media content for IG/FB</li>
+              <li>• Light video editing for short-form content</li>
+            </ul>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Branding</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Logo</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Social Content</span
+              >
+              <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                >Video Edits</span
+              >
+            </div>
+
+            <div class="mt-6 text-sm text-white/70">
+              Want more samples? Use the contact form and I can share details.
+            </div>
+          </article>
+        </div>
+
+        <!-- NOTE: Add more projects -->
+        <div class="mt-6 rounded-3xl note p-5 text-sm text-white/70">
+          <div class="font-semibold text-white/90">
+            NOTE: Add more projects here
+          </div>
+          <p class="mt-2">
+            Duplicate one of the project cards above and update the title,
+            description, highlights, tags, and the image file name in the
+            <code class="text-white/90">images/</code> folder.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="pt-16 md:pt-20">
+        <div
+          class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between"
+        >
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight md:text-3xl">
+              Skills
+            </h2>
+            <p class="mt-2 text-sm text-white/70 md:text-base">
+              Click a group to highlight related skills.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <button
+              data-filter="all"
+              class="filterBtn rounded-full glass px-4 py-2 text-sm font-semibold hover:bg-white/10"
+            >
+              All
+            </button>
+            <button
+              data-filter="support"
+              class="filterBtn rounded-full glass px-4 py-2 text-sm font-semibold hover:bg-white/10"
+            >
+              Support & Ops
+            </button>
+            <button
+              data-filter="tools"
+              class="filterBtn rounded-full glass px-4 py-2 text-sm font-semibold hover:bg-white/10"
+            >
+              Tools
+            </button>
+            <button
+              data-filter="creative"
+              class="filterBtn rounded-full glass px-4 py-2 text-sm font-semibold hover:bg-white/10"
+            >
+              Creative
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="rounded-3xl glass-strong p-5 shadow-glow">
+            <h3 class="text-sm font-semibold text-white/90">
+              Support & Operations
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="skillTag" data-group="support"
+                >Customer Support</span
+              >
+              <span class="skillTag" data-group="support">Chat Support</span>
+              <span class="skillTag" data-group="support">Problem Solving</span>
+              <span class="skillTag" data-group="support"
+                >Written Communication</span
+              >
+              <span class="skillTag" data-group="support">Time Management</span>
+              <span class="skillTag" data-group="support">CRM Systems</span>
+              <span class="skillTag" data-group="support">Documentation</span>
+              <span class="skillTag" data-group="support">Data Tracking</span>
+              <span class="skillTag" data-group="support">Process Support</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl glass-strong p-5 shadow-glow">
+            <h3 class="text-sm font-semibold text-white/90">Tools</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="skillTag" data-group="tools">Canva</span>
+              <span class="skillTag" data-group="tools">CapCut</span>
+              <span class="skillTag" data-group="tools">Freshchat</span>
+              <span class="skillTag" data-group="tools">WordPress</span>
+              <span class="skillTag" data-group="tools">Google Sheets</span>
+              <span class="skillTag" data-group="tools">Microsoft Office</span>
+              <span class="skillTag" data-group="tools">Stripe</span>
+              <span class="skillTag" data-group="tools">Skype</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl glass-strong p-5 shadow-glow">
+            <h3 class="text-sm font-semibold text-white/90">Creative</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="skillTag" data-group="creative">Graphic Design</span>
+              <span class="skillTag" data-group="creative">Branding</span>
+              <span class="skillTag" data-group="creative">Logo Concepts</span>
+              <span class="skillTag" data-group="creative"
+                >Social Media Content</span
+              >
+              <span class="skillTag" data-group="creative">Video Editing</span>
+              <span class="skillTag" data-group="creative"
+                >Basic Photo Editing</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="pt-16 md:pt-20">
+        <div class="rounded-3xl glass-strong p-6 shadow-glow md:p-8">
+          <h2 class="text-2xl font-bold tracking-tight md:text-3xl">About</h2>
+          <p class="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+            I’m Axl Rose Lilagan, a detail-oriented Virtual Assistant with
+            experience in customer support, backend operations, and task
+            tracking. I focus on clear communication, organized workflows, and
+            making sure requests are handled correctly from start to finish.
+          </p>
+
+          <div class="mt-6 grid gap-3 md:grid-cols-3">
+            <div class="rounded-2xl glass p-4">
+              <div class="text-sm font-semibold">Customer Support</div>
+              <p class="mt-1 text-sm text-white/70">
+                Chat support, troubleshooting, and customer updates.
+              </p>
+            </div>
+            <div class="rounded-2xl glass p-4">
+              <div class="text-sm font-semibold">Backend Ops</div>
+              <p class="mt-1 text-sm text-white/70">
+                Documentation, sheets tracking, and workflow support.
+              </p>
+            </div>
+            <div class="rounded-2xl glass p-4">
+              <div class="text-sm font-semibold">Creative Support</div>
+              <p class="mt-1 text-sm text-white/70">
+                Clean visuals and short-form video edits when needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume (On-page, no downloads) -->
+      <section id="resume" class="pt-16 md:pt-20">
+        <div class="rounded-3xl glass-strong p-6 shadow-glow md:p-8">
+          <div
+            class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <h2 class="text-2xl font-bold tracking-tight md:text-3xl">
+                Resume
+              </h2>
+              <p class="mt-2 text-sm text-white/70 md:text-base">
+                This page is my resume. Review my experience, skills, and
+                background below.
+              </p>
+            </div>
+
+            <!-- NOTE: Update your contact links below -->
+            <div class="text-sm text-white/70">
+              <span class="text-white/50">Email:</span>
+              <a
+                class="underline decoration-white/30 underline-offset-4 hover:decoration-white"
+                href="mailto:axlrosekv@gmail.com"
+              >
+                axlrosekv@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-6 md:grid-cols-2">
+            <!-- Experience -->
+            <div class="rounded-3xl glass p-5">
+              <h3 class="text-lg font-semibold">Experience</h3>
+
+              <div class="mt-4 space-y-4">
+                <div class="rounded-2xl glass p-4">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <div class="text-sm font-semibold">
+                        Customer Support Virtual Assistant
+                      </div>
+                      <div class="text-xs text-white/60">
+                        VAhouse • 2023 – 2025
+                      </div>
+                    </div>
+                    <span
+                      class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                      >Chat Support</span
+                    >
+                  </div>
+                  <ul class="mt-3 space-y-2 text-sm text-white/70">
+                    <li>
+                      • Handled customer inquiries via chat and provided clear
+                      updates
+                    </li>
+                    <li>
+                      • Supported backend workflows and kept records organized
+                    </li>
+                    <li>
+                      • Documented actions and followed processes to resolve
+                      issues
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl glass p-4">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <div class="text-sm font-semibold">Tech Support</div>
+                      <div class="text-xs text-white/60">
+                        DRMC • 2019 – 2020
+                      </div>
+                    </div>
+                    <span
+                      class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                      >Support</span
+                    >
+                  </div>
+                  <ul class="mt-3 space-y-2 text-sm text-white/70">
+                    <li>
+                      • Assisted with troubleshooting and basic technical
+                      guidance
+                    </li>
+                    <li>
+                      • Communicated steps clearly for non-technical users
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl glass p-4">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <div class="text-sm font-semibold">
+                        Product Research (Freelance)
+                      </div>
+                      <div class="text-xs text-white/60">2022 – 2023</div>
+                    </div>
+                    <span
+                      class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                      >Research</span
+                    >
+                  </div>
+                  <ul class="mt-3 space-y-2 text-sm text-white/70">
+                    <li>• Conducted product and market research</li>
+                    <li>• Created findings summaries for decision-making</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills + Education -->
+            <div class="rounded-3xl glass p-5">
+              <h3 class="text-lg font-semibold">Core Skills</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Customer Support</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Chat Support</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Problem Solving</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Documentation</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Time Management</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >CRM Tools</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Google Sheets</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Stripe</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >Canva</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >CapCut</span
+                >
+                <span class="rounded-full glass px-3 py-1 text-xs text-white/70"
+                  >WordPress</span
+                >
+              </div>
+
+              <div class="mt-8">
+                <h3 class="text-lg font-semibold">Education</h3>
+                <div class="mt-3 rounded-2xl glass p-4 text-sm text-white/70">
+                  <!-- NOTE: Replace this with your real education -->
+                  NOTE: Replace this text with your school, degree, and year.
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h3 class="text-lg font-semibold">Certifications</h3>
+                <div class="mt-3 rounded-2xl glass p-4 text-sm text-white/70">
+                  <!-- NOTE: Replace this with your certifications -->
+                  NOTE: Add certifications here (example: Google Workspace,
+                  Customer Service, etc.).
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-2xl note p-4 text-sm text-white/70">
+                <div class="font-semibold text-white/90">
+                  NOTE: Customize your resume content
+                </div>
+                <p class="mt-2">
+                  You can edit the bullets above to match the exact work you
+                  want to highlight. If you paste your exact experience bullets,
+                  I can rewrite them to sound stronger and more polished.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="pt-16 pb-16 md:pt-20 md:pb-24">
+        <div class="rounded-3xl glass-strong p-6 shadow-glow md:p-8">
+          <div
+            class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <h2 class="text-2xl font-bold tracking-tight md:text-3xl">
+                Contact
+              </h2>
+              <p class="mt-2 text-sm text-white/70 md:text-base">
+                Send a message and I’ll get back to you as soon as I can.
+              </p>
+            </div>
+            <div class="text-sm text-white/70">
+              <span class="text-white/50">Email:</span>
+              <a
+                class="underline decoration-white/30 underline-offset-4 hover:decoration-white"
+                href="mailto:axlrosekv@gmail.com"
+              >
+                axlrosekv@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <form id="contactForm" class="mt-8 grid gap-4 md:grid-cols-2">
+            <div class="md:col-span-1">
+              <label class="text-xs text-white/70">Full Name</label>
+              <input
+                name="name"
+                type="text"
+                required
+                class="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none rm-transition transition focus:border-white/25"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div class="md:col-span-1">
+              <label class="text-xs text-white/70">Email</label>
+              <input
+                name="email"
+                type="email"
+                required
+                class="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none rm-transition transition focus:border-white/25"
+                placeholder="you@email.com"
+              />
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="text-xs text-white/70">What can I help with?</label>
+              <select
+                name="topic"
+                class="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none rm-transition transition focus:border-white/25"
+              >
+                <option class="bg-slate-950" value="Support / VA">
+                  Support / VA
+                </option>
+                <option class="bg-slate-950" value="Backend Ops">
+                  Backend Ops
+                </option>
+                <option class="bg-slate-950" value="Graphic Design">
+                  Graphic Design
+                </option>
+                <option class="bg-slate-950" value="Video Editing">
+                  Video Editing
+                </option>
+                <option class="bg-slate-950" value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="text-xs text-white/70">Message</label>
+              <textarea
+                name="message"
+                required
+                rows="5"
+                class="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none rm-transition transition focus:border-white/25"
+                placeholder="Tell me a bit about what you need..."
+              ></textarea>
+            </div>
+
+            <div
+              class="md:col-span-2 flex flex-col gap-3 md:flex-row md:items-center md:justify-between"
+            >
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-bold text-slate-950 rm-transition transition hover:bg-white/90"
+              >
+                Send Message
+              </button>
+
+              <p id="formStatus" class="text-sm text-white/70"></p>
+            </div>
+
+            <div
+              class="md:col-span-2 rounded-2xl note p-4 text-xs text-white/70"
+            >
+              <div class="font-semibold text-white/90">
+                NOTE: Contact form setup
+              </div>
+              <p class="mt-2">
+                This form shows a success message only. To actually deliver
+                emails, connect this to EmailJS or Formspree.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="pb-10 text-center text-xs text-white/50">
+        © <span id="year"></span> Axl Rose Lilagan. Portfolio & resume website.
+      </footer>
+    </main>
+
+    <script>
+      // Skills tag styling
+      document.querySelectorAll(".skillTag").forEach((el) => {
+        el.className =
+          "skillTag rounded-full px-3 py-1 text-xs font-medium rm-transition transition " +
+          "bg-white/8 border border-white/10 text-white/75 hover:bg-white/12";
+      });
+
+      // Mobile menu
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn?.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      // Close menu when clicking a link (mobile)
+      document.querySelectorAll("#mobileMenu a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Skills filter
+      const filterButtons = document.querySelectorAll(".filterBtn");
+      const skillTags = document.querySelectorAll(".skillTag");
+
+      function setActiveFilter(filter) {
+        filterButtons.forEach((btn) => {
+          const isActive = btn.getAttribute("data-filter") === filter;
+          btn.classList.toggle("bg-white/15", isActive);
+          btn.classList.toggle("bg-white/5", !isActive);
+          btn.classList.toggle("border", true);
+          btn.classList.toggle("border-white/10", true);
+        });
+
+        skillTags.forEach((tag) => {
+          const group = tag.getAttribute("data-group");
+          const show = filter === "all" || group === filter;
+
+          tag.style.opacity = show ? "1" : "0.35";
+          tag.style.filter = show ? "none" : "saturate(0.7)";
+        });
+      }
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () =>
+          setActiveFilter(btn.getAttribute("data-filter")),
+        );
+      });
+
+      setActiveFilter("all");
+
+      // Contact form (UI-only success)
+      const contactForm = document.getElementById("contactForm");
+      const formStatus = document.getElementById("formStatus");
+
+      contactForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        formStatus.textContent =
+          "Thanks! Your message is ready to send (connect EmailJS/Formspree to deliver it).";
+        contactForm.reset();
+        setTimeout(() => (formStatus.textContent = ""), 6000);
+      });
+
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
+
